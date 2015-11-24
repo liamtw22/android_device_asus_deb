@@ -267,7 +267,7 @@ service irsc_util /system/bin/irsc_util "/etc/sec_config"
 service rmt_storage /system/bin/rmt_storage
     class main
     user root
-    group system
+    group system wakelock
 
 service hciattach /system/bin/init.flo.bt.sh
     class late_start
@@ -291,7 +291,7 @@ service bridgemgrd /system/bin/bridgemgrd
 service qmuxd /system/bin/qmuxd
     class main
     user root
-    group radio audio bluetooth gps
+    group radio audio bluetooth wakelock gps
 
 service ks_checker /system/bin/kickstart_checker.sh
     class core
@@ -317,7 +317,7 @@ on property:ril.asus_debugger_running=1
 
 service netmgrd /system/bin/netmgrd
     class main
-    group radio
+    group radio wakelock
 
 service ril-daemon /vendor/bin/hw/rild
     class main
@@ -330,7 +330,7 @@ service ril-daemon /vendor/bin/hw/rild
 service sensors /system/bin/sensors.qcom
     class late_start
     user root
-    group root
+    group root wakelock
 
 service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     -ip2p0 -Dnl80211 -c/data/misc/wifi/p2p_supplicant.conf \
