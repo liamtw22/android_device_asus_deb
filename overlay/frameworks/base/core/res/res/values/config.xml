@@ -19,6 +19,12 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- If this is true, the screen will fade off. -->
+    <bool name="config_animateScreenLights">false</bool>
+
+    <!-- Default color for notification LED is white. -->
+    <color name="config_defaultNotificationColor">#ffffffff</color>
+
     <!-- Default LED on time for notification LED in milliseconds. -->
     <integer name="config_defaultNotificationLedOn">1000</integer>
 
@@ -108,15 +114,6 @@
     <!-- Minimum screen brightness setting allowed by the power manager.
          The user is forbidden from setting the brightness below this level. -->
     <integer name="config_screenBrightnessSettingMinimum">5</integer>
-
-    <!-- Minimum allowable screen brightness to use in a very dark room.
-         This value sets the floor for the darkest possible auto-brightness
-         adjustment.  It is expected to be somewhat less than the first entry in
-         config_autoBrightnessLcdBacklightValues so as to allow the user to have
-         some range of adjustment to dim the screen further than usual in very
-         dark rooms. The contents of the screen must still be clearly visible
-         in darkness (although they may not be visible in a bright room). -->
-    <integer name="config_screenBrightnessDark">2</integer>
 
     <!-- The duration (in milliseconds) that the radio will scan for a signal
          when there's no network connection. If the scan doesn't timeout, use zero -->
@@ -234,6 +231,13 @@
     <!-- Shutdown if the battery temperature exceeds (this value * 0.1) Celsius. -->
     <integer name="config_shutdownBatteryTemperature">600</integer>
 
+    <bool name="config_ui_enableFadingMarquee">false</bool>
+
+    <string-array name="config_usbHostBlacklist">
+        <!--  /dev/bus/usb/001 is used for the modem -->
+        <item>/dev/bus/usb/001</item>
+    </string-array>
+
     <!-- reference volume index for music stream to limit headphone volume and display warning -->
     <integer name="config_safe_media_volume_index">6</integer>
 
@@ -245,6 +249,10 @@
 
          This value has been tuned for the "msm8960" device. -->
     <dimen name="config_minScalingSpan">35mm</dimen>
+
+    <!-- Setting this true forces the headset jack switches to use the/dev/input/event subsystem
+         rather than the uevent framework. -->
+    <bool name="config_useDevInputEventForAudioJack">false</bool>
 
     <!-- The default iface on which to monitor data use -->
     <string name="config_datause_iface" translatable="false">rmnet_usb0</string>
@@ -258,9 +266,17 @@
          it causes the device to wake up.
          The default is false. -->
     <bool name="config_lidControlsSleep">true</bool>
-
-    <!-- Is the device capable of hot swapping an UICC Card -->
-    <bool name="config_hotswapCapable">true</bool>
+    
+   <!-- Enable doze mode
+         ComponentName of a dream to show whenever the system would otherwise have gone to sleep. -->
+    <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
+    <!-- If true, the doze component is not started until after the screen has been turned off
+         and the screen off animation has been performed. -->
+    <bool name="config_dozeAfterScreenOff">true</bool>
+    <!-- Specifies whether to decouple the interactive state of the device from the display on/off state. -->
+    <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
+    <!-- Enable Doze and App Standby -->
+    <bool name="config_enableAutoPowerModes">true</bool>
 
     <!-- Configure mobile tcp buffer sizes in the form:
          rat-name:rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max
@@ -277,41 +293,6 @@
          format is UMTS|LTE|... -->
     <string translatable="false" name="config_radio_access_family">GSM | WCDMA | LTE</string>
 
-    <!-- Hardware keys present on the device, stored as a bit field.
-         This integer should equal the sum of the corresponding value for each
-         of the following keys present:
-             1 - Home
-             2 - Back
-             4 - Menu
-             8 - Assistant (search)
-            16 - App switch
-            32 - Camera
-            64 - Volume rocker
-         For example, a device with Home, Back and Menu keys would set this
-         config to 7. -->
-    <integer name="config_deviceHardwareKeys">64</integer>
-
-    <!-- Hardware keys present on the device with the ability to wake, stored as a bit field.
-         This integer should equal the sum of the corresponding value for each
-         of the following keys present:
-             1 - Home
-             2 - Back
-             4 - Menu
-             8 - Assistant (search)
-            16 - App switch
-            32 - Camera
-            64 - Volume rocker
-         For example, a device with Home, Back and Menu keys would set this
-         config to 7. -->
-    <integer name="config_deviceHardwareWakeKeys">64</integer>
-
-    <!-- enable doze powersaving mode -->
-    <bool name="config_enableAutoPowerModes">true</bool>
-
     <!-- Flag indicating if device supports EAP SIM, AKA, AKA' -->
     <bool name="config_eap_sim_based_auth_supported">false</bool>
-
-    <!-- Configure wifi tcp buffersizes in the form:
-         rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
-    <string name="config_wifi_tcp_buffers">524288,1048576,2560000,524288,1048576,2560000</string>
 </resources>
