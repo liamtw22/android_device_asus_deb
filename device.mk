@@ -27,7 +27,8 @@ PRODUCT_PACKAGES += \
 
 # Features
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
+    device/asus/deb/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # Camera
 PRODUCT_PACKAGES += \
