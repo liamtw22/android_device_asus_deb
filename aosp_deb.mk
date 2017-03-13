@@ -25,7 +25,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 PRODUCT_NAME := aosp_deb
 PRODUCT_DEVICE := deb
-PRODUCT_BRAND := Android
-PRODUCT_MODEL := AOSP on Deb
-PRODUCT_MANUFACTURER := ASUS
+PRODUCT_BRAND := google
+PRODUCT_MODEL := Nexus 7
+PRODUCT_MANUFACTURER := asus
 PRODUCT_RESTRICT_VENDOR_FILES := true
