@@ -23,7 +23,7 @@ $(call inherit-product, device/asus/deb/device.mk)
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
-PRODUCT_NAME := aosp_deb
+PRODUCT_NAME := razorg
 PRODUCT_DEVICE := deb
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 7
