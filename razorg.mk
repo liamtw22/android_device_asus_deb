@@ -17,8 +17,6 @@
 # Sample: This is where we'd set a backup provider if we had one
 # $(call inherit-product, device/sample/products/backup_overlay.mk)
 
-# Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/asus/deb/device.mk)
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
@@ -34,4 +32,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=razorg \
     BUILD_FINGERPRINT=google/razorg/deb:6.0.1/MOB30X/3036618:user/release-keys \
     PRIVATE_BUILD_DESC="razorg-user 6.0.1 MOB30X 3036618 release-keys"
+
+# Inherit from hardware-specific part of the product configuration
+$(call inherit-product, device/asus/deb/device.mk)
+$(call inherit-product-if-exists, vendor/asus/flo/flo-vendor.mk)
+$(call inherit-product-if-exists, vendor/asus/deb/deb-vendor.mk)
+#$(call inherit-product-if-exists, vendor/qcom/proprietary/common/config/device-vendor.mk)
 
