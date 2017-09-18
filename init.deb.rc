@@ -363,10 +363,11 @@ service thermald /system/bin/thermald
     class main
     group radio
 
-service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
+service mpdecision /system/bin/mpdecision --avg_comp
     class main
     user root
-    group root system
+    group root readproc system
+    disabled
 
 service qcamerasvr /system/bin/mm-qcamera-daemon
     class late_start
