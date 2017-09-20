@@ -351,7 +351,6 @@ service mpdecision /system/bin/mpdecision --avg_comp
     class main
     user root
     group root readproc system
-    disabled
 
 service qcamerasvr /system/bin/mm-qcamera-daemon
     class late_start
