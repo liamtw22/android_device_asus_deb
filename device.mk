@@ -36,6 +36,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     hostapd_default.conf
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
+
 # the actual meat of the device-specific product definition
 $(call inherit-product, device/asus/flo/device-common.mk)
 
