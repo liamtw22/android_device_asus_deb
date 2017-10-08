@@ -40,7 +40,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
         persist.radio.apm_sim_not_pwdn=1
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-        rild.libpath=/system/lib/libril-qc-qmi-1.so
+        rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
 
 # the actual meat of the device-specific product definition
 $(call inherit-product, device/asus/flo/device-common.mk)
