@@ -27,6 +27,10 @@ PRODUCT_COPY_FILES := \
 PRODUCT_PACKAGES += \
     camera.msm8960
 
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.0-impl \
+    android.hardware.radio.deprecated@1.0-impl
+
 # Features
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
