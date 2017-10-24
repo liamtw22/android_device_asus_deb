@@ -273,6 +273,14 @@ service netmgrd /system/bin/netmgrd
     class main
     group radio
 
+service ril-daemon /vendor/bin/hw/rild
+    class main
+    socket rild stream 660 root radio
+    socket sap_uim_socket1 stream 660 bluetooth bluetooth
+    socket rild-debug stream 660 radio system
+    user root
+    group radio cache inet misc audio log readproc wakelock qcom_diag net_raw
+
 service sensors /system/bin/sensors.qcom
     class late_start
     user root
