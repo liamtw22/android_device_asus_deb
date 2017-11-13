@@ -18,7 +18,8 @@
 PRODUCT_PACKAGES := \
     rild \
     CarrierConfig \
-    BasicSmsReceiver
+    BasicSmsReceiver \
+    rild_socket
 
 PRODUCT_COPY_FILES := \
     device/asus/deb/fstab.deb:root/fstab.flo \
