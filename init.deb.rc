@@ -26,8 +26,6 @@ on init
     symlink /sdcard /storage/sdcard0
 
 on init
-    export LD_SHIM_LIBS /system/vendor/lib/libril-qc-qmi-1.so|rild_socket.so
-
     # Set permissions for persist partition
     mkdir /persist 0771 system system
     mkdir /firmware 0771 system system
