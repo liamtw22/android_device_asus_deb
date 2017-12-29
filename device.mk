@@ -35,10 +35,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
-#NFC
-PRODUCT_PACKAGES += \
-    nfc_nci.bcm2079x.default
-
 # Do not power down SIM card when modem is sent to Low Power Mode.
 PRODUCT_PROPERTY_OVERRIDES += \
         persist.radio.apm_sim_not_pwdn=1
