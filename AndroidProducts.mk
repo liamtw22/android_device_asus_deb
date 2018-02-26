@@ -14,5 +14,5 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/razorg.mk
+PRODUCT_MAKEFILES := $(LOCAL_DIR)/razorg.mk $(LOCAL_DIR)/razorg_go.mk
 

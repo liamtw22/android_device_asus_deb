@@ -15,4 +15,4 @@
 #
 
 add_lunch_combo razorg-userdebug
-
+add_lunch_combo razorg_go-userdebug
