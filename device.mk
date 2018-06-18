@@ -25,7 +25,7 @@ PRODUCT_COPY_FILES := \
     device/asus/deb/init.deb.rc:root/init.flo.rc
 
 PRODUCT_PACKAGES += \
-    camera.msm8960
+	camera.deb
 
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.0-impl \
