@@ -128,6 +128,10 @@ on boot
 
     chown wifi wifi /sys/module/wlan/parameters/fwpath
 
+on post-fs
+    # Allow writing to the kernel trace log.
+    chmod 0222 /sys/kernel/debug/tracing/trace_marker
+
 # msm specific files that need to be created on /data
 on post-fs-data
     chown system system /dev/wcnss_wlan
