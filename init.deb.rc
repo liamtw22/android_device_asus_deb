@@ -280,6 +280,7 @@ service hciattach /system/bin/init.flo.bt.sh
     class late_start
     user bluetooth
     group qcom_oncrpc bluetooth system
+    seclabel u:r:bluetooth_loader:s0
     disabled
     oneshot
 
