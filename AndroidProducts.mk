@@ -1,5 +1,5 @@
 #
-# Copyright 2013 The Android Open-Source Project
+# Copyright 2012 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,5 +14,8 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/razorg.mk $(LOCAL_DIR)/razorg_go.mk
+PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/razorg.mk \
+    $(LOCAL_DIR)/razorg_go.mk \
+    $(LOCAL_DIR)/aosp_deb.mk
 
