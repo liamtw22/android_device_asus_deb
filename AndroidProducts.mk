@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/lineage_deb.mk
+	$(LOCAL_DIR)/aosp_deb.mk
