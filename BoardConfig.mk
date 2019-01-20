@@ -20,6 +20,9 @@ TARGET_BOARD_INFO_FILE := device/asus/deb/board-info.txt
 
 DEVICE_MANIFEST_FILE := device/asus/deb/manifest.xml
 
+# RIL
+TARGET_RIL_VARIANT := caf
+
 BOARD_HAL_STATIC_LIBRARIES := libdumpstate.deb
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/asus/deb
