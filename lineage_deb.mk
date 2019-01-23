@@ -5,10 +5,10 @@ TARGET_SCREEN_WIDTH := 1200
 TARGET_BOOTANIMATION_HALF_RES := true
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_mini_tablet_wifionly.mk)
+$(call inherit-product, vendor/lineage/config/common_mini_tablet_wifionly.mk)
 
 # Inherit telephony stuff
-$(call inherit-product, vendor/cm/config/telephony.mk)
+$(call inherit-product, vendor/lineage/config/telephony.mk)
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
