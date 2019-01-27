@@ -51,3 +51,6 @@ $(call inherit-product-if-exists, vendor/asus/deb/deb-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += \
     device/asus/deb/overlay
+
+PRODUCT_ENFORCE_RRO_TARGETS := \
+    framework-res
