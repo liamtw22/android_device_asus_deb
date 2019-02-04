@@ -24,6 +24,9 @@ TARGET_BOOT_ANIMATION_RES := 1080
 $(call inherit-product, vendor/aosp/config/common.mk)
 $(call inherit-product, vendor/aosp/config/aex_props.mk)
 
+# Inherit telephony stuff
+$(call inherit-product, vendor/aosp/config/telephony.mk)
+
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
