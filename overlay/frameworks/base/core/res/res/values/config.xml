@@ -118,7 +118,6 @@
          be empty.  An example would be "usb.*" -->
     <string-array translatable="false" name="config_tether_usb_regexs">
         <item>"usb\\d"</item>
-        <item>"rndis\\d"</item>
     </string-array>
 
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
@@ -133,8 +132,7 @@
          bluetooth interfaces.  If the device doesn't want to support tethering over bluetooth this
          should be empty. -->
     <string-array translatable="false" name="config_tether_bluetooth_regexs">
-        <item>"bt-pan"</item>
-        <item>"bnep\\d"</item>
+           <item>"bt-pan"</item>
     </string-array>
 
     <!-- Array of allowable ConnectivityManager network types for tethering -->
@@ -144,9 +142,7 @@
         <item>1</item>
         <item>0</item>
         <item>5</item>
-        <item>6</item>
         <item>7</item>
-        <item>9</item>
     </integer-array>
 
     <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
