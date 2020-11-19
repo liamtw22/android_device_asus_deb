@@ -43,6 +43,8 @@ on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
 
+    start qcamerasvr
+
 on boot
     #Create QMUX deamon socket area
     mkdir /dev/socket/qmux_radio 0770 radio radio
@@ -325,9 +327,10 @@ service mpdecision /vendor/bin/mpdecision --avg_comp
     group root readproc system
 
 service qcamerasvr /vendor/bin/mm-qcamera-daemon
-    class late_start
+    class main
     user camera
     group camera system inet input
+    disabled
 
 service wcnss_init /vendor/bin/init.flo.wifi.sh
     class late_start
