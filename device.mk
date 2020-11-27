@@ -20,14 +20,9 @@ PRODUCT_PACKAGES := \
     CarrierConfig \
     BasicSmsReceiver
 
-# Ramdisk
 PRODUCT_PACKAGES += \
-    fstab.deb \
-    init.deb.rc
-
-PRODUCT_PACKAGES += \
-    android.hardware.radio@1.0-impl \
-    android.hardware.radio.deprecated@1.0-impl
+    android.hardware.radio@1.0 \
+    android.hardware.radio.deprecated@1.0
 
 # Features
 PRODUCT_COPY_FILES += \
