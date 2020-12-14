@@ -270,7 +270,7 @@ service bridgemgrd /vendor/bin/bridgemgrd
 # QMUX must be in multiple groups to support external process connections
 service qmuxd /vendor/bin/qmuxd
     class main
-    user root
+    user radio
     group radio audio bluetooth wakelock gps
 
 service ks_checker /vendor/bin/kickstart_checker.sh
